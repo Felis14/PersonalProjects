@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0CCAF47A-0809-4C0E-9AD4-C17D4C0D9140}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Cotidiano3_Felix</RootNamespace>
+    <AssemblyName>Cotidiano3_Felix</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conexion_DB\Conexion_DB.cs" />
+    <Compile Include="Controles\ControlClientes.cs" />
+    <Compile Include="Controles\ControlCuentas.cs" />
+    <Compile Include="Controles\ControlMovimientos.cs" />
+    <Compile Include="Controles\ControlUsuarios.cs" />
+    <Compile Include="MantenimientoClientes\ConsultarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoClientes\ConsultarClientes.Designer.cs">
+      <DependentUpon>ConsultarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoClientes\ModificarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoClientes\ModificarClientes.Designer.cs">
+      <DependentUpon>ModificarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoClientes\RegistrarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoClientes\RegistrarClientes.Designer.cs">
+      <DependentUpon>RegistrarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoCuentas\ActualizaMontoLiCuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoCuentas\ActualizaMontoLiCuentas.Designer.cs">
+      <DependentUpon>ActualizaMontoLiCuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoCuentas\CondicionCuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoCuentas\CondicionCuentas.Designer.cs">
+      <DependentUpon>CondicionCuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoCuentas\ConsultarCuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoCuentas\ConsultarCuentas.Designer.cs">
+      <DependentUpon>ConsultarCuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoCuentas\RegistrarCuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoCuentas\RegistrarCuentas.Designer.cs">
+      <DependentUpon>RegistrarCuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoMovimientos\AnularMovimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoMovimientos\AnularMovimiento.Designer.cs">
+      <DependentUpon>AnularMovimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoMovimientos\ConsultaMovimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoMovimientos\ConsultaMovimientos.Designer.cs">
+      <DependentUpon>ConsultaMovimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoMovimientos\RegistroMovimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoMovimientos\RegistroMovimientos.Designer.cs">
+      <DependentUpon>RegistroMovimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoNivFun\GestionPermisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoNivFun\GestionPermisos.Designer.cs">
+      <DependentUpon>GestionPermisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoNivFun\RegistrarFunciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoNivFun\RegistrarFunciones.Designer.cs">
+      <DependentUpon>RegistrarFunciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoNivFun\RegistrarNiveles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoNivFun\RegistrarNiveles.Designer.cs">
+      <DependentUpon>RegistrarNiveles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoNivFun\VisualizarNiveles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoNivFun\VisualizarNiveles.Designer.cs">
+      <DependentUpon>VisualizarNiveles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoUsuarios\ActivacionUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoUsuarios\ActivacionUsuarios.Designer.cs">
+      <DependentUpon>ActivacionUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoUsuarios\ConsultarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoUsuarios\ConsultarUsuarios.Designer.cs">
+      <DependentUpon>ConsultarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoUsuarios\EliminarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoUsuarios\EliminarUsuarios.Designer.cs">
+      <DependentUpon>EliminarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoUsuarios\ModificarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoUsuarios\ModificarUsuarios.Designer.cs">
+      <DependentUpon>ModificarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoUsuarios\RegistrarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoUsuarios\RegistrarUsuarios.Designer.cs">
+      <DependentUpon>RegistrarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\ModeloBitacora.cs" />
+    <Compile Include="Modelos\ModeloClientes.cs" />
+    <Compile Include="Modelos\ModeloCuentas.cs" />
+    <Compile Include="Modelos\ModeloMovimientos.cs" />
+    <Compile Include="Modelos\ModeloNivFun.cs" />
+    <Compile Include="Modelos\ModeloReportes.cs" />
+    <Compile Include="Modelos\ModeloUsuarios.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\ReporteBitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteBitacora.Designer.cs">
+      <DependentUpon>ReporteBitacora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteClientes.Designer.cs">
+      <DependentUpon>ReporteClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteCuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteCuentas.Designer.cs">
+      <DependentUpon>ReporteCuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteMovimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteMovimientos.Designer.cs">
+      <DependentUpon>ReporteMovimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteUsuarios.Designer.cs">
+      <DependentUpon>ReporteUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaPrincipal\IniciarSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaPrincipal\IniciarSesion.Designer.cs">
+      <DependentUpon>IniciarSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaPrincipal\MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaPrincipal\MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MantenimientoClientes\ConsultarClientes.resx">
+      <DependentUpon>ConsultarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoClientes\ModificarClientes.resx">
+      <DependentUpon>ModificarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoClientes\RegistrarClientes.resx">
+      <DependentUpon>RegistrarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoCuentas\ActualizaMontoLiCuentas.resx">
+      <DependentUpon>ActualizaMontoLiCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoCuentas\CondicionCuentas.resx">
+      <DependentUpon>CondicionCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoCuentas\ConsultarCuentas.resx">
+      <DependentUpon>ConsultarCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoCuentas\RegistrarCuentas.resx">
+      <DependentUpon>RegistrarCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoMovimientos\AnularMovimiento.resx">
+      <DependentUpon>AnularMovimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoMovimientos\ConsultaMovimientos.resx">
+      <DependentUpon>ConsultaMovimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoMovimientos\RegistroMovimientos.resx">
+      <DependentUpon>RegistroMovimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoNivFun\GestionPermisos.resx">
+      <DependentUpon>GestionPermisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoNivFun\RegistrarFunciones.resx">
+      <DependentUpon>RegistrarFunciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoNivFun\RegistrarNiveles.resx">
+      <DependentUpon>RegistrarNiveles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoNivFun\VisualizarNiveles.resx">
+      <DependentUpon>VisualizarNiveles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoUsuarios\ActivacionUsuarios.resx">
+      <DependentUpon>ActivacionUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoUsuarios\ConsultarUsuarios.resx">
+      <DependentUpon>ConsultarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoUsuarios\EliminarUsuarios.resx">
+      <DependentUpon>EliminarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoUsuarios\ModificarUsuarios.resx">
+      <DependentUpon>ModificarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoUsuarios\RegistrarUsuarios.resx">
+      <DependentUpon>RegistrarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reportes\ReporteBitacora.resx">
+      <DependentUpon>ReporteBitacora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteClientes.resx">
+      <DependentUpon>ReporteClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteCuentas.resx">
+      <DependentUpon>ReporteCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteMovimientos.resx">
+      <DependentUpon>ReporteMovimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteUsuarios.resx">
+      <DependentUpon>ReporteUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaPrincipal\IniciarSesion.resx">
+      <DependentUpon>IniciarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaPrincipal\MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_Register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_Lens.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_TrashCan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrowBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_Users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_Move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_Page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_User_Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_User_Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_Page_Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_Page_Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_Page_Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_Pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_Move_Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_Add_Thin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dark_Blue_X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_LogOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_User_Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_User_Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_Eye_Closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_Eye_Open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green_Check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red_X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cyan2_Check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cyan_Check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_LogIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoCF.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
